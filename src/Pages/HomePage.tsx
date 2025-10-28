@@ -1,5 +1,3 @@
-// src/Pages/HomePage.tsx
-import React from 'react';
 import Hero from '../Components/Home/Hero'; // Verifique se o caminho está correto
 import ProductCard from '../Components/Home/ProductCard'; // Verifique se o caminho está correto
 
