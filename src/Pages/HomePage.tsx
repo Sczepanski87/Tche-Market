@@ -5,33 +5,33 @@ import ProductCard from '../Components/Home/ProductCard'; // Verifique se o cami
 interface Product {
   id: number;
   name: string;
-  price: string;
+  price: number;
   image: string;
-}
+} 
 
 const featuredProducts: Product[] = [
   {
     id: 1,
     name: 'Smartphone X-Pro 256GB',
-    price: 'R$ 4.499,90',
+    price: 4499.90,
     image: '../public/smartphone.png',
   },
   {
     id: 2,
     name: 'Notebook Ultra Fino i7 16GB RAM',
-    price: 'R$ 5.199,00',
+    price: 5199.00,
     image: '../public/notebookFino.png',
   },
   {
     id: 3,
     name: 'Tênis de Corrida MaxRun',
-    price: 'R$ 349,99',
+    price: 349.99,
     image: '../public/tenisCorrida.png',
   },
     {
     id: 4,
     name: 'Fone de Ouvido Bluetooth',
-    price: 'R$ 899,90',
+    price: 899.90,
     image: '../public/foneBluetooth.png',
   },
 ];

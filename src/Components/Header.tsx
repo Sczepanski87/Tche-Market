@@ -1,7 +1,12 @@
 import { Search, LogIn, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FiShoppingBag } from 'react-icons/fi';
+import { useCart } from '../Contexts/CartContext.tsx';
 
 const Header = () => {
+
+  const { cartCount } = useCart();
+
   return (
     <header className="w-full bg-cream text-gray-800 px-6 py-4 flex items-center justify-between shadow-md">
       {/* LOGO */}
@@ -24,6 +29,21 @@ const Header = () => {
 
       {/* LOGIN BUTTON */}
       <div className="flex gap-10">
+        <Link 
+              to="/carrinho" // <-- Rota definida no App.tsx
+              className="relative p-2 text-gray-600 hover:text-primary transition-colors rounded-full transition-shadow shadow-sm hover:inset-shadow-sm hover:shadow-none "
+              aria-label="Carrinho de Compras"
+            >
+              <FiShoppingBag className="w-6 h-6" />
+              {/* Badge de Contagem (Agora com cartCount real) */}
+              {cartCount > 0 && (
+                <span className="absolute top-0 right-0 inline-flex items-center justify-center 
+                                  px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 
+                                  bg-red-600 rounded-full">
+                  {cartCount} {/* <-- AQUI ESTÁ A CONTAGEM REAL */}
+                </span>
+              )}
+            </Link>
         <Link
           to="/login"
           className="flex items-center gap-2 px-5 py-2 rounded-full transition-[inset-shadow] shadow-sm hover:inset-shadow-sm hover:shadow-none"

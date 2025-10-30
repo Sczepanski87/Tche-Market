@@ -19,8 +19,8 @@ const Hero: React.FC = () => {
           </p>
           <a
             href="#promocoes"
-            className="bg-primary text-white py-3 px-8 rounded-full text-lg font-bold 
-                       hover:bg-primary-dark transition-colors shadow-lg"
+            className="bg-blue-950 text-white py-3 px-8 rounded-full text-lg font-bold 
+                       hover:bg-blue-800 transition-colors shadow-lg"
           >
             Ver Promoções
           </a>
